@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+
+{% block conteudo %}
+
+{% load crispy_forms_tags %}
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form_contrato.razaosocial.errors }}
+        <label>Razão social: </label>
+        {{ form_contrato.razaosocial | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.cnpj.errors }}
+        <label>CNPJ: </label>
+        {{ form_contrato.cnpj | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.inscricao.errors }}
+        <label>Inscrição Estadual: </label>
+        {{ form_contrato.inscricao | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.nome.errors }}
+        <label>Nome: </label>
+        {{ form_contrato.nome | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.produto.errors }}
+        <label>Produto: </label>
+        {{ form_contrato.produto | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.endereco.errors }}
+        <label>Endereço: </label>
+        {{ form_contrato.endereco | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.bairro.errors }}
+        <label>Bairro: </label>
+        {{ form_contrato.bairro | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.cidade.errors }}
+        <label>Cidade: </label>
+        {{ form_contrato.cidade | crispy }}
+    </div>    
+    <div class="form-group">
+        {{ form_contrato.uf.errors }}
+        <label>UF: </label>
+        {{ form_contrato.uf | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.cep.errors }}
+        <label>CEP: </label>
+        {{ form_contrato.cep | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.telefone.errors }}
+        <label>Telefone: </label>
+        {{ form_contrato.telefone | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.email.errors }}
+        <label>E-mail: </label>
+        {{ form_contrato.email | crispy }}
+    </div>    
+    <div class="form-group">
+        {{ form_contrato.insercoes.errors }}
+        <label>Inserções: </label>
+        {{ form_contrato.insercoes | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.tipo_insercao.errors }}
+        <label>Tipo de inserção: </label>
+        {{ form_contrato.tipo_insercao | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.pagamento.errors }}
+        <label>Tipo de pagamento: </label>
+        {{ form_contrato.pagamento | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.valor_total.errors }}
+        <label>Valor total: </label>
+        {{ form_contrato.valor_total | crispy }}
+    </div>    
+    <div class="form-group">
+        {{ form_contrato.titulo.errors }}
+        <label>Titulo: </label>
+        {{ form_contrato.titulo | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.parcelas.errors }}
+        <label>Parcelas: </label>
+        {{ form_contrato.parcelas | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.valor_parcelas.errors }}
+        <label>Valor das parcelas: </label>
+        {{ form_contrato.valor_parcelas | crispy }}
+    </div>
+    <div class="form-group">
+        {{ form_contrato.vencimento.errors }}
+        <label>Vencimento: </label>
+        {{ form_contrato.vencimento | crispy }}
+    </div>    
+    <div class="form-group">
+        {{ form_contrato.observacoes.errors }}
+        <label>Observações: </label>
+        {{ form_contrato.observacoes | crispy }}
+    </div>        
+    
+
+    <div class="form-group">
+        <input type="submit" value="Salvar">
+    </div>
+</form>
+
+{% endblock conteudo %}
